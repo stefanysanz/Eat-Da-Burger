@@ -1,11 +1,11 @@
 const orm = require('../config/orm.js')
 
-const user = {
+const burger = {
   getAll(cb) {
     orm.getAll('burgers', burgers => cb(burgers))
   },
-  create(burgers, cb) {
-    orm.create('burgers', burgers, () => cb())
+  create(burger, cb) {
+    orm.create('burgers', burger, () => cb())
   },
   update(changes, id, cb) {
     orm.update('burgers', changes, { id }, () => cb())
@@ -15,4 +15,4 @@ const user = {
   }
 }
 
-module.exports = burgers
+module.exports = burger
