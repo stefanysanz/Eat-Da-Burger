@@ -9,8 +9,6 @@ app.use(express.json())
 
 app.engine('.hbs', require('express-handlebars')({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', '.hbs')
-
-
-app.use(require('./controllers/burgers_controller.js'))
+app.use(require('./controllers'))
 
 app.listen(process.env.PORT || 3000)
